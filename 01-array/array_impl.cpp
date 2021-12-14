@@ -23,10 +23,10 @@ public:
     Array() : size(0) {}
     
     // Insert an element into the given position
-    void insertAt(int element, int pos);
+    void insert_at(int element, int pos);
     
     // Delete an element by the given position
-    void deleteAt(int pos);
+    void delete_at(int pos);
     
     // Search the given element and return the position
     int search(int element);
@@ -38,7 +38,7 @@ public:
     void print(const std::string& msg);
 };
 
-void Array::insertAt(int element, int pos)
+void Array::insert_at(int element, int pos)
 {
     // Step 1. Check if the Array is full. If true, return error.
     if (size >= CAPACITY) {
@@ -63,7 +63,7 @@ void Array::insertAt(int element, int pos)
     ++size;
 }
 
-void Array::deleteAt(int pos)
+void Array::delete_at(int pos)
 {
     // Step 1. Check if the given position is out of data range. If true, return error.
     if (pos < 0 || pos >= size) {
@@ -119,24 +119,24 @@ int main()
     Array arr;
     
     // Insert elements
-    arr.insertAt(0, 0);
-    arr.print("Array after insertAt(0, 0)");
+    arr.insert_at(0, 0);
+    arr.print("Array after insert_at(0, 0)");
     //==> [ 0 ]
     
-    arr.insertAt(10, 1);
-    arr.print("Array after insertAt(10, 1)");
+    arr.insert_at(10, 1);
+    arr.print("Array after insert_at(10, 1)");
     //==> [ 0, 10 ]
     
-    arr.insertAt(20, 2);
-    arr.print("Array after insertAt(20, 2)");
+    arr.insert_at(20, 2);
+    arr.print("Array after insert_at(20, 2)");
     //==> [ 0, 10, 20 ]
     
-    arr.insertAt(5, 1);
-    arr.print("Array after insertAt(5, 1)");
+    arr.insert_at(5, 1);
+    arr.print("Array after insert_at(5, 1)");
     //==> [ 0, 5, 10, 20 ]
     
-    arr.insertAt(15, 3);
-    arr.print("Array after insertAt(15, 3)");
+    arr.insert_at(15, 3);
+    arr.print("Array after insert_at(15, 3)");
     //==> [ 0, 5, 10, 15, 20 ]
     
     cout << "Access element at index 3 = " << arr.get(3) << endl;
@@ -144,12 +144,12 @@ int main()
     cout << "Searching element 5 found at index = " << arr.search(5) << endl;
     
     // Delete elements
-    arr.deleteAt(1);
-    arr.print("Array after deleteAt(1)");
+    arr.delete_at(1);
+    arr.print("Array after delete_at(1)");
     //==> [ 0, 10, 15, 20 ]
     
-    arr.deleteAt(2);
-    arr.print("Array after deleteAt(2)");
+    arr.delete_at(2);
+    arr.print("Array after delete_at(2)");
     //==> [ 0, 10, 20 ]
     
     return 0;
