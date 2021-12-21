@@ -29,13 +29,15 @@ public:
     void delete_at(int pos);
     
     // Search the given element and return the position
+    // Returns the index if found, -1 otherwise.
     int search(int element);
     
     // Access the element at given position
+    // Returns the element
     int get(int pos);
     
-    // Print the array elements
-    void print(const std::string& msg);
+    // Traverse and print the elements
+    void traverse(const std::string& msg);
 };
 
 void Array::insert_at(int element, int pos)
@@ -103,7 +105,7 @@ int Array::get(int pos)
     return array[pos];
 }
 
-void Array::print(const std::string& msg)
+void Array::traverse(const std::string& msg)
 {
     cout << msg << endl;
     cout << "[";
@@ -120,23 +122,23 @@ int main()
     
     // Insert elements
     arr.insert_at(0, 0);
-    arr.print("Array after insert_at(0, 0)");
+    arr.traverse("Array after insert_at(0, 0)");
     //==> [ 0 ]
     
     arr.insert_at(10, 1);
-    arr.print("Array after insert_at(10, 1)");
+    arr.traverse("Array after insert_at(10, 1)");
     //==> [ 0, 10 ]
     
     arr.insert_at(20, 2);
-    arr.print("Array after insert_at(20, 2)");
+    arr.traverse("Array after insert_at(20, 2)");
     //==> [ 0, 10, 20 ]
     
     arr.insert_at(5, 1);
-    arr.print("Array after insert_at(5, 1)");
+    arr.traverse("Array after insert_at(5, 1)");
     //==> [ 0, 5, 10, 20 ]
     
     arr.insert_at(15, 3);
-    arr.print("Array after insert_at(15, 3)");
+    arr.traverse("Array after insert_at(15, 3)");
     //==> [ 0, 5, 10, 15, 20 ]
     
     cout << "Access element at index 3 = " << arr.get(3) << endl;
@@ -145,11 +147,11 @@ int main()
     
     // Delete elements
     arr.delete_at(1);
-    arr.print("Array after delete_at(1)");
+    arr.traverse("Array after delete_at(1)");
     //==> [ 0, 10, 15, 20 ]
     
     arr.delete_at(2);
-    arr.print("Array after delete_at(2)");
+    arr.traverse("Array after delete_at(2)");
     //==> [ 0, 10, 20 ]
     
     return 0;
