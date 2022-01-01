@@ -26,4 +26,6 @@ Data Structures tutorial with examples
   * [Circular Array Implementation](https://datastructures.simplerize.com/data-structures/deque-implementation-using-circular-array/)
   * [Doubly List Implementation](https://datastructures.simplerize.com/data-structures/deque-implementation-using-doubly-linked-list/)
 ## [Hash Table](https://datastructures.simplerize.com/data-structures/hash-table-introduction/)
+* [Separate Chaining](https://datastructures.simplerize.com/data-structures/hash-table-implementation-using-separate-chaining/)
+* [Linear Probing](https://datastructures.simplerize.com/data-structures/hash-table-using-linear-probing/)
 ## Tree
