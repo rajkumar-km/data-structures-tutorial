@@ -90,7 +90,7 @@ int Array::search(int element)
             return i;
         }
     }
-    // Step 4. If the element is not found after the traversal, return -1
+    // Step 3. If the element is not found after the traversal, return -1
     return -1;
 }
 
