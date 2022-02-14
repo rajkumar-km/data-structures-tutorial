@@ -3,7 +3,7 @@ Data Structures tutorial with examples
 
 ## [Array](https://datastructures.simplerize.com/data-structures/array-data-structure/)
 * [Simple Array Implementation](https://datastructures.simplerize.com/data-structures/simple-array-implementation/)
-## Linked List
+## [Linked List](https://datastructures.simplerize.com/data-structures/linked-list-introduction/)
 * [Singly Linked List](https://datastructures.simplerize.com/data-structures/singly-linked-list/)
 * [Doubly Linked List](https://datastructures.simplerize.com/data-structures/doubly-linked-list/)
 * [Circular Singly List](https://datastructures.simplerize.com/data-structures/circular-linked-list-singly/)
