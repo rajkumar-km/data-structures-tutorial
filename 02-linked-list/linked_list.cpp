@@ -1,5 +1,5 @@
 /**
- * C++ example to demonstrate Linked List
+ * C++ example to demonstrate the Singly Linked List
  */
 #include <iostream>
 using namespace std;
@@ -46,13 +46,13 @@ public:
     // Returns the matching node if found, NULL otherwise.
     Node* search(int element);
 
-    // Print the elements
-    void print(const std::string& msg);
+    // Traverse the elements
+    void traverse(const std::string& msg);
 };
 
 Node* List::insert_front(int element)
 {
-    // Step 1. Create the node
+    // Step 1. Create the new node
     Node* new_node = new Node();
     new_node->element = element;
 
@@ -131,7 +131,7 @@ void List::remove(int element)
     }
         
     // Step 3. Otherwise, iterate the linked list from start to end,
-    // and search if the element is found.
+    // and search the element.
     for (Node* node = head ; node->next != NULL ; node = node->next) {
         
         if (node->next->element == element) {
@@ -151,17 +151,18 @@ void List::remove(int element)
 
 Node* List::search(int element)
 {
-    // Iterate the linked list from start to end
+    // Step 1. Iterate the linked list from start to end
     for (Node* node = head ; node != NULL ; node = node->next) {
+        // Step 2. Check if the element matches, and return the node if found.
         if (node->element == element) {
             return node; // Found element
         }
     }
+    // Step 3. Return NULL if none matches.
     return NULL; // Not found
 }
 
-// Print the linked list
-void List::print(const std::string& msg)
+void List::traverse(const std::string& msg)
 {
     cout << msg << endl;
     cout << "HEAD ==> ";
@@ -176,17 +177,17 @@ int main()
 {
     // Create a linked list
     List list;
-    list.print("initial list");
+    list.traverse("initial list");
 
     // Insert elements
     list.insert_front(20);
-    list.print("insert_front(20)");
+    list.traverse("insert_front(20)");
 
     Node *node_10 = list.insert_front(10);
-    list.print("insert_front(10)");
+    list.traverse("insert_front(10)");
     
     list.insert_after(node_10, 15);
-    list.print("insert_after(node_10, 15)");
+    list.traverse("insert_after(node_10, 15)");
 
     // Search an element
     Node *node_15 = list.search(15);
@@ -194,11 +195,11 @@ int main()
 
     // Delete elements
     list.delete_front();
-    list.print("delete_front()");
+    list.traverse("delete_front()");
     
     list.delete_after(node_15);
-    list.print("delete_after(node_15)");
+    list.traverse("delete_after(node_15)");
     
     list.remove(15);
-    list.print("remove(15)");
+    list.traverse("remove(15)");
 }
